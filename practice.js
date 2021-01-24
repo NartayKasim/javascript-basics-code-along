@@ -195,7 +195,7 @@ let theBoss;
 // the function assigns the value of theName to theBoss variable
 
 function assignName(name){
-  theBoss = theName
+  return theBoss = name;
 };
 
 
@@ -564,7 +564,14 @@ function sleep(){
 // Use the if and else keywords in your solution
 // The arguments passed into decisionMaker will always be true or false and will be changed during testing
 
-function decisionMaker() {
-  if (hungry==true && tired == false) {
-    eat();
-  }}
+function decisionMaker(hunger, fatigue) {
+  if (hunger==true && fatigue==false) {
+    return eat();
+  }
+  else if (hunger==false && fatigue==true) {
+    return sleep();
+  }
+  else {
+    return "undecided"
+  }
+}
